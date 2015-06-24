@@ -222,7 +222,7 @@
         _inputPswLab.textColor = [UIColor whiteColor];
         [self.view addSubview:_inputPswLab];
         
-        CGFloat    numberPlateViewY = _inputPswLab.maxY * 1.5;//self.view.height - KWHC_BottomHeight - [WHC_PlateView plateHeightWithType:GestureDragType];
+        CGFloat    numberPlateViewY = _inputPswLab.maxY * 1.5;
         _gestureInputView = [[WHC_GestureDragPlateView alloc]initWithFrame:CGRectMake(0.0, numberPlateViewY, self.view.width, [WHC_PlateView plateHeightWithType:GestureDragType])];
         _gestureInputView.delegate = self;
         [self.view addSubview:_gestureInputView];
