@@ -193,6 +193,6 @@
 
 #pragma mark - WHC_CircleViewDelegate
 - (void)WHC_CircleView:(WHC_CircleView *)circleView clickIndex:(NSInteger)index{
-    
+    //空实现
 }
 @end
