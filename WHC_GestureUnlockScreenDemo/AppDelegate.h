@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+/*
+ *  qq:712641411
+ *  gitHub:https://github.com/netyouli
+ *  csdn:http://blog.csdn.net/windwhc/article/category/3117381
+ */
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

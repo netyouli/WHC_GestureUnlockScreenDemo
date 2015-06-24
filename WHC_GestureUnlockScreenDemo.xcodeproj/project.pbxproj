@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3CCB8F11B3A552900C31591 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C3CCB8F01B3A552900C31591 /* README.md */; };
+		C3CCB8F61B3A563C00C31591 /* a.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3CCB8F31B3A563C00C31591 /* a.gif */; };
+		C3CCB8F71B3A563C00C31591 /* b.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3CCB8F41B3A563C00C31591 /* b.gif */; };
+		C3CCB8F81B3A563C00C31591 /* c.gif in Resources */ = {isa = PBXBuildFile; fileRef = C3CCB8F51B3A563C00C31591 /* c.gif */; };
+		C3DD341F1B38F15D0047D739 /* WHC_GestureDragPlateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DD341E1B38F15D0047D739 /* WHC_GestureDragPlateView.m */; };
 		C3E17D741B3256D500E6E206 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E17D731B3256D500E6E206 /* main.m */; };
 		C3E17D771B3256D500E6E206 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E17D761B3256D500E6E206 /* AppDelegate.m */; };
 		C3E17D7A1B3256D500E6E206 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E17D791B3256D500E6E206 /* ViewController.m */; };
-		C3E17D7D1B3256D500E6E206 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E17D7B1B3256D500E6E206 /* Main.storyboard */; };
 		C3E17D7F1B3256D500E6E206 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3E17D7E1B3256D500E6E206 /* Images.xcassets */; };
 		C3E17D821B3256D500E6E206 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E17D801B3256D500E6E206 /* LaunchScreen.xib */; };
 		C3E17D8E1B3256D500E6E206 /* WHC_GestureUnlockScreenDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E17D8D1B3256D500E6E206 /* WHC_GestureUnlockScreenDemoTests.m */; };
+		C3E17D981B32574F00E6E206 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E17D971B32574F00E6E206 /* ViewController.xib */; };
+		C3E17D9C1B3258DC00E6E206 /* WHC_GestureUnlockScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E17D9B1B3258DC00E6E206 /* WHC_GestureUnlockScreenVC.m */; };
+		C3E17D9F1B32671C00E6E206 /* UIView+WHC_ViewProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E17D9E1B32671C00E6E206 /* UIView+WHC_ViewProperty.m */; };
+		C3E17DA21B32684700E6E206 /* WHC_PswInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E17DA11B32684700E6E206 /* WHC_PswInputView.m */; };
+		C3E17DD71B3288F100E6E206 /* WHC_NumberPlateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E17DD61B3288F100E6E206 /* WHC_NumberPlateView.m */; };
+		C3E17DDA1B328A4800E6E206 /* WHC_CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E17DD91B328A4800E6E206 /* WHC_CircleView.m */; };
+		C3E17DDD1B328C9400E6E206 /* WHC_PlateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E17DDC1B328C9400E6E206 /* WHC_PlateView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3CCB8F01B3A552900C31591 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C3CCB8F31B3A563C00C31591 /* a.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = a.gif; sourceTree = "<group>"; };
+		C3CCB8F41B3A563C00C31591 /* b.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = b.gif; sourceTree = "<group>"; };
+		C3CCB8F51B3A563C00C31591 /* c.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = c.gif; sourceTree = "<group>"; };
+		C3DD341D1B38F15D0047D739 /* WHC_GestureDragPlateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_GestureDragPlateView.h; sourceTree = "<group>"; };
+		C3DD341E1B38F15D0047D739 /* WHC_GestureDragPlateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_GestureDragPlateView.m; sourceTree = "<group>"; };
 		C3E17D6E1B3256D500E6E206 /* WHC_GestureUnlockScreenDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHC_GestureUnlockScreenDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E17D721B3256D500E6E206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3E17D731B3256D500E6E206 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -34,12 +51,24 @@
 		C3E17D761B3256D500E6E206 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C3E17D781B3256D500E6E206 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C3E17D791B3256D500E6E206 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C3E17D7C1B3256D500E6E206 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3E17D7E1B3256D500E6E206 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C3E17D811B3256D500E6E206 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C3E17D871B3256D500E6E206 /* WHC_GestureUnlockScreenDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WHC_GestureUnlockScreenDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E17D8C1B3256D500E6E206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3E17D8D1B3256D500E6E206 /* WHC_GestureUnlockScreenDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHC_GestureUnlockScreenDemoTests.m; sourceTree = "<group>"; };
+		C3E17D971B32574F00E6E206 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		C3E17D9A1B3258DC00E6E206 /* WHC_GestureUnlockScreenVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_GestureUnlockScreenVC.h; sourceTree = "<group>"; };
+		C3E17D9B1B3258DC00E6E206 /* WHC_GestureUnlockScreenVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_GestureUnlockScreenVC.m; sourceTree = "<group>"; };
+		C3E17D9D1B32671C00E6E206 /* UIView+WHC_ViewProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WHC_ViewProperty.h"; sourceTree = "<group>"; };
+		C3E17D9E1B32671C00E6E206 /* UIView+WHC_ViewProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WHC_ViewProperty.m"; sourceTree = "<group>"; };
+		C3E17DA01B32684700E6E206 /* WHC_PswInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_PswInputView.h; sourceTree = "<group>"; };
+		C3E17DA11B32684700E6E206 /* WHC_PswInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_PswInputView.m; sourceTree = "<group>"; };
+		C3E17DD51B3288F100E6E206 /* WHC_NumberPlateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_NumberPlateView.h; sourceTree = "<group>"; };
+		C3E17DD61B3288F100E6E206 /* WHC_NumberPlateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_NumberPlateView.m; sourceTree = "<group>"; };
+		C3E17DD81B328A4800E6E206 /* WHC_CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_CircleView.h; sourceTree = "<group>"; };
+		C3E17DD91B328A4800E6E206 /* WHC_CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_CircleView.m; sourceTree = "<group>"; };
+		C3E17DDB1B328C9400E6E206 /* WHC_PlateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_PlateView.h; sourceTree = "<group>"; };
+		C3E17DDC1B328C9400E6E206 /* WHC_PlateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_PlateView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +89,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3CCB8F21B3A563C00C31591 /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				C3CCB8F31B3A563C00C31591 /* a.gif */,
+				C3CCB8F41B3A563C00C31591 /* b.gif */,
+				C3CCB8F51B3A563C00C31591 /* c.gif */,
+			);
+			path = gif;
+			sourceTree = "<group>";
+		};
 		C3E17D651B3256D500E6E206 = {
 			isa = PBXGroup;
 			children = (
+				C3CCB8F01B3A552900C31591 /* README.md */,
 				C3E17D701B3256D500E6E206 /* WHC_GestureUnlockScreenDemo */,
 				C3E17D8A1B3256D500E6E206 /* WHC_GestureUnlockScreenDemoTests */,
 				C3E17D6F1B3256D500E6E206 /* Products */,
@@ -81,11 +121,13 @@
 		C3E17D701B3256D500E6E206 /* WHC_GestureUnlockScreenDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C3CCB8F21B3A563C00C31591 /* gif */,
+				C3E17D991B32588E00E6E206 /* WHC_Lib */,
 				C3E17D751B3256D500E6E206 /* AppDelegate.h */,
 				C3E17D761B3256D500E6E206 /* AppDelegate.m */,
 				C3E17D781B3256D500E6E206 /* ViewController.h */,
 				C3E17D791B3256D500E6E206 /* ViewController.m */,
-				C3E17D7B1B3256D500E6E206 /* Main.storyboard */,
+				C3E17D971B32574F00E6E206 /* ViewController.xib */,
 				C3E17D7E1B3256D500E6E206 /* Images.xcassets */,
 				C3E17D801B3256D500E6E206 /* LaunchScreen.xib */,
 				C3E17D711B3256D500E6E206 /* Supporting Files */,
@@ -117,6 +159,27 @@
 				C3E17D8C1B3256D500E6E206 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3E17D991B32588E00E6E206 /* WHC_Lib */ = {
+			isa = PBXGroup;
+			children = (
+				C3E17D9D1B32671C00E6E206 /* UIView+WHC_ViewProperty.h */,
+				C3E17D9E1B32671C00E6E206 /* UIView+WHC_ViewProperty.m */,
+				C3E17D9A1B3258DC00E6E206 /* WHC_GestureUnlockScreenVC.h */,
+				C3E17D9B1B3258DC00E6E206 /* WHC_GestureUnlockScreenVC.m */,
+				C3E17DA01B32684700E6E206 /* WHC_PswInputView.h */,
+				C3E17DA11B32684700E6E206 /* WHC_PswInputView.m */,
+				C3E17DD51B3288F100E6E206 /* WHC_NumberPlateView.h */,
+				C3E17DD61B3288F100E6E206 /* WHC_NumberPlateView.m */,
+				C3DD341D1B38F15D0047D739 /* WHC_GestureDragPlateView.h */,
+				C3DD341E1B38F15D0047D739 /* WHC_GestureDragPlateView.m */,
+				C3E17DDB1B328C9400E6E206 /* WHC_PlateView.h */,
+				C3E17DDC1B328C9400E6E206 /* WHC_PlateView.m */,
+				C3E17DD81B328A4800E6E206 /* WHC_CircleView.h */,
+				C3E17DD91B328A4800E6E206 /* WHC_CircleView.m */,
+			);
+			path = WHC_Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +262,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3E17D7D1B3256D500E6E206 /* Main.storyboard in Resources */,
+				C3CCB8F81B3A563C00C31591 /* c.gif in Resources */,
+				C3CCB8F71B3A563C00C31591 /* b.gif in Resources */,
 				C3E17D821B3256D500E6E206 /* LaunchScreen.xib in Resources */,
+				C3E17D981B32574F00E6E206 /* ViewController.xib in Resources */,
+				C3CCB8F61B3A563C00C31591 /* a.gif in Resources */,
 				C3E17D7F1B3256D500E6E206 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,8 +286,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3E17D7A1B3256D500E6E206 /* ViewController.m in Sources */,
+				C3E17DDA1B328A4800E6E206 /* WHC_CircleView.m in Sources */,
+				C3DD341F1B38F15D0047D739 /* WHC_GestureDragPlateView.m in Sources */,
+				C3E17DA21B32684700E6E206 /* WHC_PswInputView.m in Sources */,
+				C3E17DDD1B328C9400E6E206 /* WHC_PlateView.m in Sources */,
 				C3E17D771B3256D500E6E206 /* AppDelegate.m in Sources */,
+				C3E17D9F1B32671C00E6E206 /* UIView+WHC_ViewProperty.m in Sources */,
 				C3E17D741B3256D500E6E206 /* main.m in Sources */,
+				C3E17DD71B3288F100E6E206 /* WHC_NumberPlateView.m in Sources */,
+				C3CCB8F11B3A552900C31591 /* README.md in Sources */,
+				C3E17D9C1B3258DC00E6E206 /* WHC_GestureUnlockScreenVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +318,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C3E17D7B1B3256D500E6E206 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C3E17D7C1B3256D500E6E206 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C3E17D801B3256D500E6E206 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -416,6 +482,7 @@
 				C3E17D931B3256D500E6E206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3E17D941B3256D500E6E206 /* Build configuration list for PBXNativeTarget "WHC_GestureUnlockScreenDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +491,7 @@
 				C3E17D961B3256D500E6E206 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
