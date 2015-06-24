@@ -39,6 +39,7 @@
 @end
 @interface WHC_PlateView ()<WHC_CircleViewDelegate>{
     NSMutableArray             *    _rectArr;                  //区域数组
+    NSMutableArray             *    _circleViewArr;            //圈视图数组
 }
 
 @end
@@ -49,6 +50,7 @@
     self = [super initWithFrame:frame];
     if(self){
         _rectArr = [NSMutableArray array];
+        _circleViewArr = [NSMutableArray array];
     }
     return self;
 }
@@ -72,6 +74,7 @@
         }
     }
     [_rectArr removeAllObjects];
+    [_circleViewArr removeAllObjects];
     self.backgroundColor = [UIColor clearColor];
     CGFloat   circleWidth = (self.width - (KWHC_PlateColumn + 1) * KWHC_CircleMargin) / (CGFloat)KWHC_PlateColumn;
     CGFloat   circleSumWidth = KWHC_PlateColumn * circleWidth + (KWHC_PlateColumn - 1) * KWHC_CircleMargin;
@@ -87,6 +90,7 @@
             circleView.circleType = type;
             [circleView setNumber:number];
             [self addSubview:circleView];
+            [_circleViewArr addObject:circleView];
             if(type == GestureDragType){
                 WHC_Rect   * rectObject = [WHC_Rect new];
                 CGRect     rect  = {circleView.x + circleWidth / 2.0 - KWHC_SolidCircleRaduis, circleView.y + circleWidth / 2.0 - KWHC_SolidCircleRaduis, KWHC_SolidCircleRaduis * 2.0, KWHC_SolidCircleRaduis * 2.0};
@@ -134,6 +138,59 @@
     }
     return strPsw;
 }
+
+
+- (NSInteger)checkDidConnectIndexPoint:(CGPoint)point{
+    NSInteger  index = -1;
+    for (WHC_Rect * rectObject in _rectArr) {
+        CGRect  rect = rectObject.rect;
+        if(CGRectContainsPoint(rect, point)){
+            index = rectObject.number;
+            break;
+        }
+    }
+    return index;
+}
+
+- (WHC_CircleView *)getCircleViewWithIndex:(NSInteger)index{
+    WHC_CircleView * circleView = nil;
+    if(_circleViewArr){
+        for (WHC_CircleView * tempCircleView in _circleViewArr) {
+            if(index == tempCircleView.number){
+                circleView = tempCircleView;
+                break;
+            }
+        }
+    }
+    return circleView;
+}
+
+- (void)resetCircleBackgroundWithPoints:(NSArray *)points{
+    [self setFailBackgroundWithStartColor:NULL endColor:NULL isFail:NO  points:points];
+}
+
+- (void)setFailBackgroundWithStartColor:(CGColorRef)startColor endColor:(CGColorRef)endColor points:(NSArray *)points{
+    [self setFailBackgroundWithStartColor:startColor endColor:endColor isFail:YES points:points];
+}
+
+- (void)setFailBackgroundWithStartColor:(CGColorRef)startColor endColor:(CGColorRef)endColor isFail:(BOOL)isFail points:(NSArray *)points{
+    
+    for (NSValue * pointValue in points) {
+        CGPoint  point = [pointValue CGPointValue];
+        NSInteger  index = [self checkDidConnectIndexPoint:point];
+        if(index != -1){
+            WHC_CircleView  * circleView = [self getCircleViewWithIndex:index];
+            if(circleView){
+                if(isFail){
+                    [circleView setFailBackgroundWithStartColor:startColor endColor:endColor];
+                }else{
+                    [circleView resetBackground];
+                }
+            }
+        }
+    }
+}
+
 #pragma mark - WHC_CircleViewDelegate
 - (void)WHC_CircleView:(WHC_CircleView *)circleView clickIndex:(NSInteger)index{
     

@@ -20,6 +20,8 @@
 @interface WHC_CircleView (){
     UIButton                            * _numBtn;                //数字按钮
     CAGradientLayer                     * _btnSubLayer;           //按钮背景层
+    CAGradientLayer                     * _gradientLayer;         //背景渐变层
+    CAShapeLayer                        * _subLayer;              //背景子层
 }
 
 @end
@@ -35,30 +37,46 @@
 }
 
 - (void)setBackground{
-    CAGradientLayer  * gradientLayer = [CAGradientLayer layer];
-    gradientLayer.frame = self.bounds;
-    gradientLayer.colors = @[(id)KWHC_StartColor,(id)KWHC_EndColor];
-    gradientLayer.locations = @[@(0.0),@(1.0)];
+    _gradientLayer = [CAGradientLayer layer];
+    _gradientLayer.frame = self.bounds;
+    _gradientLayer.colors = @[(id)KWHC_StartColor,(id)KWHC_EndColor];
+    _gradientLayer.locations = @[@(0.0),@(1.0)];
     
-    CAShapeLayer  * subLayer = [CAShapeLayer layer];
-    subLayer.backgroundColor = [UIColor clearColor].CGColor;
-    subLayer.frame = self.bounds;
-    [gradientLayer setMask:subLayer];
-    [self.layer addSublayer:gradientLayer];
+    _subLayer = [CAShapeLayer layer];
+    _subLayer.backgroundColor = [UIColor clearColor].CGColor;
+    _subLayer.frame = self.bounds;
+    [_gradientLayer setMask:_subLayer];
+    [self.layer addSublayer:_gradientLayer];
     
-    CGMutablePathRef  path = CGPathCreateMutable();
-    CGPathAddArc(path, NULL, subLayer.frame.size.width / 2.0, subLayer.frame.size.height / 2.0, self.width / 2.0 - 1.0, 0.0, M_PI * 2.0, NO);
-    subLayer.lineWidth = 2.0;
-    subLayer.strokeColor = [UIColor redColor].CGColor;
-    subLayer.fillColor = [UIColor clearColor].CGColor;
-    subLayer.path = path;
+    CGPathRef path = [self getPath];
+    _subLayer.path = path;
     CABasicAnimation  * ba = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     ba.duration = KWHC_DrawCircleAnimationDuring;
     ba.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     ba.fromValue = @(0.0);
     ba.toValue = @(1.0);
-    [subLayer addAnimation:ba forKey:@"AnimationDrawCircle"];
+    [_subLayer addAnimation:ba forKey:@"AnimationDrawCircle"];
     CGPathRelease(path);
+}
+
+- (CGPathRef)getPath{
+    CGMutablePathRef  path = CGPathCreateMutable();
+    CGPathAddArc(path, NULL, _subLayer.frame.size.width / 2.0, _subLayer.frame.size.height / 2.0, self.width / 2.0 - 1.0, 0.0, M_PI * 2.0, NO);
+    _subLayer.lineWidth = 2.0;
+    _subLayer.strokeColor = [UIColor redColor].CGColor;
+    _subLayer.fillColor = [UIColor clearColor].CGColor;
+    return path;
+}
+
+- (void)setFailBackgroundWithStartColor:(CGColorRef)startColor endColor:(CGColorRef)endColor{
+    _gradientLayer.colors = @[(__bridge id)startColor,(__bridge id)endColor];
+    _btnSubLayer.colors = @[(__bridge id)startColor,(__bridge id)endColor];
+    [_subLayer setNeedsDisplay];
+    [_btnSubLayer setNeedsDisplay];
+}
+
+- (void)resetBackground{
+    [self setFailBackgroundWithStartColor:KWHC_StartColor endColor:KWHC_EndColor];
 }
 
 - (void)setCircleType:(WHCGestureUnlockType)circleType{
@@ -83,6 +101,7 @@
 }
 
 - (void)setNumber:(NSInteger)number{
+    _number = number;
     if(_numBtn && _circleType == ClickNumberType){
         _numBtn.tag = number;
         [_numBtn setTitle:@(number).stringValue forState:UIControlStateNormal];

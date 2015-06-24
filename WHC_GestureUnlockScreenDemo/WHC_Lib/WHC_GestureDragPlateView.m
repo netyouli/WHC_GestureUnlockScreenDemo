@@ -71,6 +71,7 @@
 
 - (void)setFailPath{
     if(!_againSetGesture){
+        [self setFailBackgroundWithStartColor:KWHC_ErrorStartColor endColor:KWHC_ErrorEndColor points:_savePointArr];
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         _gradientLayer.colors = @[(id)KWHC_ErrorStartColor,(id)KWHC_ErrorEndColor];
         [self drawDragPath];
@@ -189,6 +190,7 @@
 #pragma mark - 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     _gradientLayer.colors = @[(id)KWHC_StartColor,(id)KWHC_EndColor];
+    [self resetCircleBackgroundWithPoints:_savePointArr];
     [self clearPath];
 }
 @end

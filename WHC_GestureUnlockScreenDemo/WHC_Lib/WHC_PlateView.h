@@ -24,4 +24,7 @@
 - (CGPoint)checkConnectPoint:(CGPoint)point;
 + (CGFloat)plateHeightWithType:(WHCGestureUnlockType)type;
 - (NSString *)getGesturePswWithPoints:(NSArray *)pointArr;
+
+- (void)resetCircleBackgroundWithPoints:(NSArray *)points;
+- (void)setFailBackgroundWithStartColor:(CGColorRef)startColor endColor:(CGColorRef)endColor points:(NSArray *)points;
 @end

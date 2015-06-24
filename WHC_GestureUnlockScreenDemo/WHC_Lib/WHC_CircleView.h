@@ -36,5 +36,8 @@ typedef enum _GestureUnlockType:NSInteger{
 
 @property (nonatomic , assign)id<WHC_CircleViewDelegate> delegate;
 @property (nonatomic , assign)WHCGestureUnlockType  circleType;
-- (void)setNumber:(NSInteger)number;
+@property (nonatomic , assign)NSInteger number;
+
+- (void)setFailBackgroundWithStartColor:(CGColorRef)startColor endColor:(CGColorRef)endColor;
+- (void)resetBackground;
 @end
