@@ -139,17 +139,19 @@
 }
 
 - (void)readDefaultUnlockType{
-    NSUserDefaults   * ud = [NSUserDefaults standardUserDefaults];
-    NSDictionary  * dict = [ud objectForKey:KWHC_ConfigurationKey];
-    if(dict && dict.count > 0){
-        NSArray * keyArr = [dict allKeys];
-        if(keyArr && keyArr.count > 0){
-            _unlockType = [keyArr[0] integerValue];
+    if(_unlockType <= 0){
+        NSUserDefaults   * ud = [NSUserDefaults standardUserDefaults];
+        NSDictionary  * dict = [ud objectForKey:KWHC_ConfigurationKey];
+        if(dict && dict.count > 0){
+            NSArray * keyArr = [dict allKeys];
+            if(keyArr && keyArr.count > 0){
+                _unlockType = [keyArr[0] integerValue];
+            }else{
+                _unlockType = GestureDragType;
+            }
         }else{
             _unlockType = GestureDragType;
         }
-    }else{
-        _unlockType = GestureDragType;
     }
 }
 
