@@ -8,6 +8,7 @@
 
 /*
  *  qq:712641411
+ *  iOS大神qq群:460122071
  *  gitHub:https://github.com/netyouli
  *  csdn:http://blog.csdn.net/windwhc/article/category/3117381
  */
@@ -28,4 +29,11 @@
 + (void)setUnlockScreenWithType:(WHCGestureUnlockType)unlockType;
 //! 设置屏幕锁(自定义类型和VC)
 + (void)setUnlockScreenWithType:(WHCGestureUnlockType)unlockType withSelf:(UIViewController *)sf;
+//! 修改解锁密码(自定义当前VC) 可以修改返回yes 否则no
++ (BOOL)modifyUnlockPasswrodWithVC:(UIViewController *)vc;
+//! 删除手势密码(自定义当前VC) 可以删除返回yes 否则no
++ (BOOL)removeGesturePasswordWithVC:(UIViewController *)vc;
+
+//！强制删除手势密码,不需要用户输入现有手势密码
++ (void)removeGesturePassword;
 @end

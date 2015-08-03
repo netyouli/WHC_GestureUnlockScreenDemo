@@ -8,12 +8,14 @@
 
 /*
  *  qq:712641411
+ *  iOS大神qq群:460122071
  *  gitHub:https://github.com/netyouli
  *  csdn:http://blog.csdn.net/windwhc/article/category/3117381
  */
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "WHC_GestureUnlockScreenVC.h"
 @interface AppDelegate ()
 
 @end
@@ -46,6 +48,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [WHC_GestureUnlockScreenVC setUnlockScreen];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

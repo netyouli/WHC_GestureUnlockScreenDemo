@@ -8,6 +8,7 @@
 
 /*
  *  qq:712641411
+ *  iOS大神qq群:460122071
  *  gitHub:https://github.com/netyouli
  *  csdn:http://blog.csdn.net/windwhc/article/category/3117381
  */
@@ -18,10 +19,9 @@
 #define KWHC_StartColor      ([UIColor colorWithRed:136.0 / 255.0  green:112.0 / 255.0 blue:151.0 / 255.0 alpha:1.0].CGColor)
 #define KWHC_EndColor        ([UIColor colorWithRed:176.0 / 255.0 green:114.0 / 255.0 blue:135.0 / 255.0 alpha:1.0].CGColor)
 typedef enum _GestureUnlockType:NSInteger{
-    
-    ClickNumberType = 1,     //点击数字键盘解锁
-    GestureDragType,         //手势路径拖拽解锁
-    
+    UnknownType = 0 ,            //未知类型
+    ClickNumberType,             //点击数字键盘解锁
+    GestureDragType              //手势路径拖拽解锁
 }WHCGestureUnlockType;
 
 @class WHC_CircleView;
