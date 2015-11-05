@@ -8,7 +8,7 @@
 
 /*
  *  qq:712641411
- *  iOS大神qq群:460122071
+ *  iOSqq群:302157745
  *  gitHub:https://github.com/netyouli
  *  csdn:http://blog.csdn.net/windwhc/article/category/3117381
  */
@@ -29,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"XXX";
+    self.title = @"WHC";
     _btn1.layer.cornerRadius = 10;
     _btn2.layer.cornerRadius = 10;
     _btn3.layer.cornerRadius = 10;

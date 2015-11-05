@@ -8,7 +8,7 @@
 
 /*
  *  qq:712641411
- *  iOS大神qq群:460122071
+ *  iOSqq群:302157745
  *  gitHub:https://github.com/netyouli
  *  csdn:http://blog.csdn.net/windwhc/article/category/3117381
  */
@@ -94,7 +94,7 @@
             [_circleViewArr addObject:circleView];
             if(type == GestureDragType){
                 WHC_Rect   * rectObject = [WHC_Rect new];
-                CGRect     rect  = {circleView.x + circleWidth / 2.0 - KWHC_SolidCircleRaduis, circleView.y + circleWidth / 2.0 - KWHC_SolidCircleRaduis, KWHC_SolidCircleRaduis * 2.0, KWHC_SolidCircleRaduis * 2.0};
+                CGRect     rect  = {circleView.x, circleView.y , circleWidth, circleWidth};
                 rectObject.rect = rect;
                 rectObject.number = number;
                 [_rectArr addObject:rectObject];
