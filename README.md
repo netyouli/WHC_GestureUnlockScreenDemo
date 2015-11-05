@@ -8,9 +8,7 @@
 ###屏幕解锁(android类型手势拖拽解锁和iphone数字键盘解锁两种类型)采用动态渐变的色彩绘制整个UI,对于想学习动态和渐变绘图的开发者很有帮助。
 
 ##运行效果
-![](https://github.com/netyouli/WHC_GestureUnlockScreenDemo/tree/master/WHC_GestureUnlockScreenDemo/gif/a.gif)
-![](https://github.com/netyouli/WHC_GestureUnlockScreenDemo/tree/master/WHC_GestureUnlockScreenDemo/gif/b.gif)
-![](https://github.com/netyouli/WHC_GestureUnlockScreenDemo/tree/master/WHC_GestureUnlockScreenDemo/gif/c.gif)
+![](https://github.com/netyouli/WHC_GestureUnlockScreenDemo/blob/master/WHC_GestureUnlockScreenDemo/gif/whc.gif)
 ##接口使用实例
 ####Use Example
 ```objective-c
