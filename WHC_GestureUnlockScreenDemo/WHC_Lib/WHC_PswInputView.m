@@ -147,17 +147,25 @@
 }
 
 - (void)clearPswCircle{
+    UIImageView  * circleView = [_circleImageVArr lastObject];
     _currentIndex--;
     if(_currentIndex < 0){
         _currentIndex = 0;
+        for (UIView * subView in self.subviews) {
+            if ([subView isKindOfClass:[UIImageView class]]) {
+                circleView = (UIImageView *)subView;
+            }
+        }
     }
-    UIImageView  * circleView = [_circleImageVArr lastObject];
-    [UIView animateWithDuration:KWHC_CircleScaleAnimationDuring delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        circleView.transform = CGAffineTransformMakeScale(0.0, 0.0);
-    } completion:^(BOOL finished) {
-        [circleView removeFromSuperview];
-        [_circleImageVArr removeLastObject];
-    }];
+    
+    if (circleView) {
+        [UIView animateWithDuration:KWHC_CircleScaleAnimationDuring delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            circleView.transform = CGAffineTransformMakeScale(0.0, 0.0);
+        } completion:^(BOOL finished) {
+            [circleView removeFromSuperview];
+            [_circleImageVArr removeLastObject];
+        }];
+    }
 }
 
 - (void)showMistakeMsg{

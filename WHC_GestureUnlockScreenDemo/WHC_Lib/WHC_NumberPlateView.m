@@ -42,6 +42,9 @@
 
 - (void)decClickCount{
     _clickCount--;
+    if (_clickCount < 0) {
+        _clickCount = 0;
+    }
 }
 #pragma mark - WHC_CircleViewDelegate
 - (void)WHC_CircleView:(WHC_CircleView *)circleView clickIndex:(NSInteger)index{
