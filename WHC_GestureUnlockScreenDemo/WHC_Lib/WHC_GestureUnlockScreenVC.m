@@ -318,6 +318,9 @@
 - (void)clickDelBtn:(UIButton *)sender{
     [_pswInputView clearPswCircle];
     [_numberPlateView decClickCount];
+    if(_pswOnce.length > 0) {
+        [_pswOnce deleteCharactersInRange:NSMakeRange(_pswOnce.length - 1, 1)];
+    }
 }
 
 - (void)clickCancelBtn:(UIButton *)sender{
